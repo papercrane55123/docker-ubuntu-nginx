@@ -32,6 +32,19 @@ $ sudo apt install curl gnupg2 ca-certificates lsb-release ubuntu-keyring
 $ sudo apt update
 $ sudo apt install nginx
 ```
+5) Dockerfile 만들기
+```
+FROM ubuntu
+
+RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
+        && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+
+RUN apt-get update && apt install nginx -y
+
+ENV LANG en_US.utf8
+```
+여기서 RUN apt-get update && apt install nginx -y가 중요한데, -y를 설정해줘야 제대로 작동된다. <br> 
+또한, RUN을 부여할 때 RUN끼리는 서로 분리되어 있으므로 항상 apt update를 실행시켜줘야 한다.
 
 
 
