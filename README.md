@@ -47,4 +47,6 @@ ENV LANG en_US.utf8
 또한, RUN을 부여할 때 RUN끼리는 서로 분리되어 있으므로 항상 apt update를 실행시켜줘야 한다.
 
 
+## How to create
+
 
