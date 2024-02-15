@@ -1,5 +1,5 @@
 # create Ubuntu-nginx image
-
+https://blog.naver.com/mini_crane_/223354266800
 
 # How to
 1) ubuntu 이미지를 설치한다.<br>
